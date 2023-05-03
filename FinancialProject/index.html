@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>Financial Project</title>
+</head>
+
+<body>
+    <div class="abas">
+        <nav>
+            <a href="#aba0">Início</a>
+            <a href="#aba1">Cadastro de Clientes</a>
+            <a href="#aba2">Lançamento de Vendas</a>
+            <a href="#aba3">Lançamento de Despesas</a>
+            <a href="#aba4">Cadastro de Produtos</a>
+            <a href="#aba5">Saldo da Empresa</a>
+        </nav>
+        <div id="aba0">
+            <h1>Início</h1>
+        </div>
+        <div id="aba1">
+            <h1>Cadastro de Clientes</h1>
+            <form id="register-form" action="php/cadastroCliente.php" method="post">
+                <p class="full-box">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" required="true" requiredmessage="Campo obrigatório" name="nome" id="nome"
+                        placeholder="Digite o nome do cliente">
+                </p>
+                <p class="half-box">
+                    <label for="rg">RG</label>
+                    <input type="text" name="rg" id="rg" placeholder="Digite o RG">
+                    <label for="cpf">CPF</label>
+                    <input type="text" required="true" requiredmessage="Campo obrigatório" name="cpf" id="cpf"
+                        placeholder="Digite o CPF">
+                </p>
+                <p class="half-box">
+                    <label for="endereco">Endereço</label>
+                    <br>
+                    <label for="address">CEP</label>
+                    <input type="text" name="cep" required="true" requiredmessage="Campo obrigatório" id="endereco"
+                        placeholder="Digite o CEP">
+                    <label for="address">Logradouro</label>
+                    <input type="text" name="logradouro" id="address" placeholder="Rua / Avenida">
+                    <br>
+                    <label for="address">Número</label>
+                    <input type="text" required="true" requiredmessage="Campo obrigatório" name="numero" id="address"
+                        placeholder="Digite o número">
+                    <label for="address">Complemento</label>
+                    <input type="address" name="complemento" id="complemento" placeholder="Digite um complemento">
+                </p>
+                <p class="half-box">
+                    <label for="">Telefone</label>
+                    <input type="tel" required="true" requiredmessage="Campo obrigatório" name="telefone" id="telefone"
+                        placeholder="Digite o contato">
+                    <label for="">Data de Nascimento</label>
+                    <input type="date" name="data" id="data" placeholder="Digite a data de Nascimento">
+                </p>
+                <p class="full-box"></p>
+                <label for="">E-mail</label>
+                <input type="e-mail" name="email" id="e-mail" placeholder="Digite o e-mail">
+                <p></p>
+                <input type="submit" name="btn-submit" id="btn-submit" value="Cadastrar">
+                </p>
+            </form>
+        </div>
+        <div id="aba2">
+            <h1>Lançamento de Vendas</h1>
+            <form id="register-form" action="php/lancamentoVendas.php" method="post">
+                <p class="full-box">
+                    <label for="codigo">Codigo do produto</label>
+                    <input type="text" required="true" requiredmessage="Campo obrigatório" name="codigo" id="codigo"
+                        placeholder="Digite o código do produto">
+                <p>
+                </p>
+                <label for="quantidade">Quantidade</label>
+                <input type="number" required="true" requiredmessage="Campo obrigatório" name="quantidade"
+                    id="quantidade" placeholder="Digite a quantidade de produtos">
+                <input type="submit" name="btn-submit" id="btn-submit" value="OK">
+                </p>
+                <label for="venda">Valor total da Venda: </label>
+                <p></p>
+                <input type="submit" name="btn-submit" id="btn-submit" value="Finalizar Pedido">
+            </form>
+        </div>
+        <div id="aba3">
+            <h1>Lançamento de Despesas</h1>
+            <form id="register-form" action="php/lancamentoDespesas.php" method="post">
+                <p class="full-box">
+                    <label for="mes">Mês de referência </label>
+                    <input type="month" required="true" requiredmessage="Campo obrigatório" name="mesdespesa"
+                        id="mesdespesa" placeholder="Digite o mês da despesa">
+            </form>
+            </p>
+            <p>
+                <label for="aluguel">Aluguel R$</label>
+                <input type="text" name="aluguel" id="aluguel" placeholder="Digite o valor da Despesa">
+            </p>
+            <p>
+                <label for="agua">Água R$</label>
+                <input type="text" name="agua" id="agua" placeholder="Digite o valor da Despesa">
+            </p>
+            <p>
+                <label for="energia">Energia R$</label>
+                <input type="text" name="energia" id="energia" placeholder="Digite o valor da Despesa">
+            </p>
+            <p>
+                <label for="internet">Internet R$</label>
+                <input type="text" name="internet" id="internet" placeholder="Digite o valor da Despesa">
+            </p>
+            <p>
+                <label for="funcionarios">Gastos com Funcionários R$ </label>
+                <input type="text" name="salario" id="salario" placeholder="Digite o valor da Despesa">
+            </p>
+            <p>
+                <label for="funcionarios">Gastos com Compras de Produtos R$ </label>
+                <input type="text" name="salario" id="salario" placeholder="Digite o valor da Despesa">
+            <p></p>
+            <input type="submit" name="btn-submit" id="btn-submit" value="Registrar">
+            </p>
+        </div>
+        <div id="aba4">
+            <h1>Cadastro de Produtos</h1>
+            <form id="register-form" action="php/cadastroProdutos.php" method="post">
+                <p>
+                    <label for="cadastroProdutos">Quantidade </label>
+                    <input type="text" name="quantidadeProduto" id="quantidadeProduto"
+                        placeholder="Digite a quantidade de Produto">
+                </p>
+                <p>
+                    <label for="cadastroProdutos">Descrição </label>
+                    <input type="text" name="descricao" id="descricao" placeholder="Digite a descrição do Produto">
+                </p>
+                <p>
+                    <label for="cadastroProdutos">Valor unitário </label>
+                    <input type="text" name="valorUnitario" id="valorUnitario"
+                        placeholder="Digite a descrição do Produto">
+                <p></p>
+                <input type="submit" name="btn-submit" id="btn-submit" value="Cadastrar">
+            </form>
+            </p>
+        </div>
+        <div id="aba5">
+            <h1>Saldo da Empresa</h1>
+            <label for="saldo">Saldo </label>
+        </div>
+    </div>
+    <script src="js/script.js">
+    </script>
+</body>
